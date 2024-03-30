@@ -97,6 +97,7 @@ En conclusión, aunque ChatGPT es una herramienta útil para trabajar con inteli
 3. **Limitaciones del modelo:** No tener en cuenta las limitaciones de los modelos nos puede llevar a caer en errores, ya sea en el contenido de la respuesta o de problemas como sesgos o información no actualizada.
 4. **Supuestos:** Se relaciona con la especificidad. El prompt debe contener toda la información necesaria que evite al modelo tener que suponer datos de entrada que no le estamos otorgando.
 
+# Técnicas básicas de prompt engineering
 ## Zero-shot y One-shot Prompting
 Las técnicas Zero-shot, One-shot y Few-shot son utilizadas en todos los modelos de Inteligencia Artificial: no están limitadas a los modelos de generación de texto. ㅤ
 
