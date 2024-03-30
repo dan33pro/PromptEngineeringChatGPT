@@ -290,16 +290,19 @@ Muchas técnicas del estilo de DAN han nacido y muchas han sido bloqueadas y con
 
 Es la capacidad del modelo para generar nueva información o conocimiento y luego ser usada como parte del prompt. Este concepto consiste en guiar al modelo a darnos información específica sobre algún tema y que luego pueda utilizar toda esa información para generar respuestas precisas a problemas más complejos. ㅤ El siguiente ejemplo (extraido de Prompt Engineering Guide) demuestra el concepto de Knowledge Generation. Iniciamos con un prompt sencillo en el que la respuesta generada por el modelo no es correcta.
 
+> [!TIP]
 > 📥 **Prompt:** “Parte del golf es tratar de obtener un puntaje más alto que los demás. Sí o no?”
 >
 > ❌ **Respuesta:** Sí.
 
 Estos errores o limitaciones del modelo podemos mejorarlos a través de la técnica de generación de conocimiento, introduciendo prompts que guíen al modelo a aprender sobre lo que preguntamos para luego poder dar una respuesta correcta a la pregunta puntual. Para este caso, en el prompt realizamos una afirmación que no es precisa para que el modelo corrija esta información. Luego, al pasar el prompt que generaba la respuesta incorrecta, utilizará el conocimiento generado por si mismo para dar una respuesta mucho más precisa: 
 
+> [!TIP]
 > 📥 **Prompt:** “Parte del golf es tratar de obtener un puntaje más alto que los demás.”
 >
 > 🧠 **Respuesta:** El objetivo del golf es jugar un conjunto de hoyos en el menor número de golpes. Una ronda de golf típicamente consta de 18 hoyos. Cada hoyo se juega una vez en la ronda en un campo de golf estándar. Cada golpe se cuenta como un punto, y el número total de golpes se utiliza para determinar el ganador del juego.
 
+> [!TIP]
 > 📥 **Prompt:** “Parte del golf es tratar de obtener un puntaje más alto que los demás. Sí o no?”
 >
 > ✅ **Respuesta:** No, el objetivo del golf no es obtener un total de puntos más alto que los demás. Al contrario, el objetivo es jugar un conjunto de hoyos en el menor número de golpes posible. El número total de golpes se utiliza para determinar el ganador del juego, no el número total de puntos.
@@ -308,16 +311,19 @@ Estos errores o limitaciones del modelo podemos mejorarlos a través de la técn
 
 Es la capacidad del modelo para integrar conocimiento que no conoce, con los datos que sí entiende, para poder generar conocimiento sobre temas particulares que no se encontraban en sus datos de entrenamiento, con el objetivo de ampliar su conocimiento sobre el tema y proporcionar respuestas más detalladas y precisas. A diferencia del Knowledge Generation, en este caso somos nosotros quienes le damos a conocer la nueva información a través de los prompts, para que luego pueda seguir instrucciones usando dicha información. ㅤ En el siguiente ejemplo, le preguntamos a GPT-3 sobre GPT-4, modelo que hasta la fecha de corte de su conocimiento, no existía.
 
+> [!TIP]
 > 📥 **Prompt:** “¿Qué es GPT-4?”
 >
 > ❌ **Respuesta:** GPT-4 es una hipotética versión futura de la familia de modelos de lenguaje GPT (Generative Pre-trained Transformer) de OpenAI. Actualmente, el modelo más avanzado de esta familia es GPT-3, lanzado en 2020. GPT-4 sería una versión mejorada de GPT-3, con un mayor número de parámetros y una capacidad aún mayor para generar texto coherente y humano-like. Sin embargo, no se sabe cuándo será lanzado o cuáles serán sus características específicas.
 
 Ahora, a través de una instrucción, vamos a integrarle información reciente de OpenAI sobre GPT-4, para que la integre a sus conocimientos previos y pueda generarnos respuesta mucho más precisa, ahora conociendo detalles sobre GPT-4 que anteriormente no conocía.
 
+> [!TIP]
 > 📥 **Prompt:** Integra la siguiente información con tu conocimiento en modelos de AI. ㅤ Información: GPT-4 es un gran modelo multimodal (que acepta entradas de imagen y texto, y emite salidas de texto) que exhibe un rendimiento a nivel humano en varios puntos de referencia académicos y profesionales. Por ejemplo, aprueba un examen de barra simulado con una puntuación de alrededor del 10 % superior de los examinados; por el contrario, la puntuación de GPT-3.5 se situó en torno al 10 % inferior. En una conversación informal, la distinción entre GPT-3.5 y GPT-4 puede ser sutil. La diferencia surge cuando la complejidad de la tarea alcanza un umbral suficiente: GPT-4 es más confiable, creativo y capaz de manejar instrucciones mucho más matizadas que GPT-3.5. ㅤ Para comprender la diferencia entre los dos modelos, se probó en una variedad de puntos de referencia, incluida la simulación de exámenes que fueron diseñados originalmente para humanos. Se procedió usando las pruebas disponibles públicamente más recientes (en el caso de las preguntas de respuesta libre de las Olimpiadas y AP) o comprando las ediciones 2022-2023 de los exámenes de práctica. No se realizó ningún entrenamiento específico para estos exámenes. El modelo detectó una minoría de los problemas en los exámenes durante el entrenamiento.”
 >
 > 🧠 **Respuesta:** (…) ㅤ
 
+> [!TIP]
 > 📥 **Prompt:** “¿Qué es GPT-4?”
 >
 > ✅ **Respuesta:** GPT-4 es un modelo de lenguaje de inteligencia artificial que acepta entradas de imagen y texto, y emite salidas de texto, y se caracteriza por ser un gran modelo multimodal que exhibe un rendimiento a nivel humano en varios puntos de referencia académicos y profesionales. GPT-4 ha superado a su predecesor, GPT-3.5, en términos de confiabilidad, creatividad y capacidad para manejar instrucciones más matizadas. Además, se ha probado en una variedad de puntos de referencia, incluyendo la simulación de exámenes diseñados originalmente para humanos, en los cuales ha obtenido resultados sobresalientes.
