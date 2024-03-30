@@ -351,53 +351,62 @@ Ahora, a través de una instrucción, vamos a integrarle información reciente d
 
 > [!NOTE]
 > **temperature=0.2:** "La capital de Francia es París."
+> 
 > **temperature=0.8:** "¡Oh là là! Algunos dicen que la capital de Francia es París, pero otros mencionan el amor, la moda y el croissant".
 
 2. **max_tokens:** Establece el límite máximo de tokens en la respuesta generada. Esto controla la longitud de la respuesta.
 
 > [!NOTE]
 > **max_tokens=10:** "La respuesta es 42."
+> 
 > **max_tokens=50:** "La respuesta a esa pregunta es 42, que es considerado el 'número de la vida' según la famosa novela de ciencia ficción 'The Hitchhiker's Guide to the Galaxy'".
 
 3. **top_p:** También conocido como "nucleus sampling" o "pensamiento de muestras de núcleo", permite controlar la diversidad de las respuestas generadas estableciendo un umbral para la probabilidad acumulada de las opciones de palabras. Las palabras se eligen hasta que la probabilidad acumulada excede el valor top_p.
 
 > [!NOTE]
 > **top_p=0.5:** "Las estaciones del año son primavera, verano, otoño e invierno."
+> 
 > **top_p=0.9:** "Las estaciones del año pueden variar dependiendo de la ubicación geográfica, pero generalmente incluyen la primavera, el verano, el otoño y el invierno".
 
 4. **presence_penalty:** Controla la preferencia del modelo por incluir o no palabras específicas en su respuesta. Un valor más alto penalizará la aparición de palabras mencionadas en el prompt, lo que puede ayudar a evitar repeticiones o mantener una respuesta más imparcial.
 
 > [!NOTE]
 > **presence_penalty=0.2:** "El clima es agradable hoy. El sol brilla y el cielo está despejado."
+> 
 > **presence_penalty=0.8:** "El clima hoy es... ¡increíble! No puedo evitar emocionarme por el sol radiante y el cielo azul sin nubes".
 
 5. **frequency_penalty:** Controla la preferencia del modelo por utilizar palabras que ya ha utilizado en su respuesta. Un valor más alto penalizará la frecuencia de aparición de palabras, lo que puede ayudar a evitar respuestas repetitivas.
 
 > [!NOTE]
 > **frequency_penalty=0.2:** "Sí, estoy de acuerdo contigo."
+> 
 > **frequency_penalty=0.8:** "¡Definitivamente estoy de acuerdo contigo! ¡Totalmente de acuerdo! ¡Sin duda alguna, estoy de acuerdo contigo!"
 
 6. **stop_sequence:** Permite especificar una secuencia de palabras que indica al modelo que debe detener la generación de texto. Puedes utilizar esto para controlar la longitud de la respuesta o para evitar que el modelo continúe generando texto no deseado.
 
 > [!NOTE]
 > **stop_sequence="\n":** "Por favor, cuéntame un chiste.\n"
+> 
 > **stop_sequence="Gracias por tu ayuda":** "¿Me puedes ayudar con algo? Gracias por tu ayuda."
 
 7. **best_of:** Especifica el número de respuestas candidatas generadas y devuelve la mejor de ellas según un criterio de puntuación. Esto puede ser útil para obtener varias opciones y elegir la más adecuada.
 
 > [!NOTE]
 > **best_of=3:** "¿Cuál es el mejor libro de ciencia ficción?" (devuelve 3 respuestas candidatas y selecciona la mejor).
+> 
 > **best_of=5:** "¿Qué película me recomiendas?" (devuelve 5 respuestas candidatas y selecciona la mejor).
 
 8. **n:** Controla el número de respuestas generadas. Puedes utilizar esto para obtener múltiples respuestas en lugar de una sola.
 
 > [!NOTE]
 > **n=3:** "Describe la teoría de la relatividad de Einstein." (genera 3 respuestas diferentes).
+> 
 > **n=5:** "¿Cuál es tu color favorito?" (genera 5 respuestas diferentes).
 
 9. **log_level:** Permite controlar el nivel de registro (log) de salida del modelo. Los niveles disponibles son "debug", "info", "warning", "error" y "critical".
 
 > [!NOTE]
 > **log_level="debug":** "Habilita un registro detallado para depuración y seguimiento.
+> 
 > **log_level="error":** Solo muestra mensajes de error en el registro.
 
