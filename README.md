@@ -328,3 +328,76 @@ Ahora, a través de una instrucción, vamos a integrarle información reciente d
 >
 > ✅ **Respuesta:** GPT-4 es un modelo de lenguaje de inteligencia artificial que acepta entradas de imagen y texto, y emite salidas de texto, y se caracteriza por ser un gran modelo multimodal que exhibe un rendimiento a nivel humano en varios puntos de referencia académicos y profesionales. GPT-4 ha superado a su predecesor, GPT-3.5, en términos de confiabilidad, creatividad y capacidad para manejar instrucciones más matizadas. Además, se ha probado en una variedad de puntos de referencia, incluyendo la simulación de exámenes diseñados originalmente para humanos, en los cuales ha obtenido resultados sobresalientes.
 
+
+## Hiper parámetros de ChatGPT
+
+| Hiperparámetro | Función | Descripción | Rango |
+|----------------|---------|-------------|-------|
+| Temperatura (temperature) | Controla la creatividad y la aleatoriedad en la generación de texto. | La temperatura ajusta la probabilidad de las palabras generadas por el modelo. Valores más altos de temperatura aumentan la aleatoriedad y la creatividad, lo que puede llevar a respuestas más diversas pero también a una mayor incoherencia. Por otro lado, valores más bajos de temperatura producen respuestas más predecibles y conservadoras. | [0, infinito) |
+| Top-p (top_p) | Controla la diversidad de la salida del modelo limitando la distribución acumulada de las palabras candidatas. | Este hiperparámetro establece una cota superior en la probabilidad acumulada de las palabras posibles para cada paso de generación de texto. Se seleccionan las palabras más probables hasta que la suma de sus probabilidades acumuladas excede este valor. Esto ayuda a garantizar que la generación de texto no se vuelva demasiado divergente o incoherente, al tiempo que permite cierta flexibilidad en la elección de palabras menos probables. | (0, 1] |
+| Top-k (top_k) | Controla el número de palabras candidatas consideradas en cada paso de generación. | Top-k limita el conjunto de palabras candidatas a las k palabras con las mayores probabilidades en cada paso de generación. Esto ayuda a mejorar la coherencia y la relevancia del texto generado al evitar que el modelo seleccione palabras poco comunes o irrelevantes. | [1, infinito) |
+| Nucleus Sampling (nucleus_sampling) | Es una técnica de muestreo de palabras que selecciona las palabras de una distribución truncada por un parámetro predefinido, que puede ser top_p o un valor absoluto. | Nucleus Sampling selecciona palabras de una distribución truncada, donde se excluyen las palabras menos probables hasta que la suma de sus probabilidades alcance un umbral definido. Esto permite un equilibrio entre la diversidad y la coherencia en la generación de texto, evitando respuestas extremadamente incoherentes mientras se mantiene cierta variabilidad. | (0, 1] |
+| Max Tokens (max_tokens) | Controla la longitud máxima de la secuencia generada. | Este hiperparámetro limita el número máximo de tokens (palabras y símbolos) en la secuencia de texto generada por el modelo. Ayuda a controlar la longitud de las respuestas generadas y a evitar que el modelo produzca textos excesivamente largos o sesgados. | [1, infinito) |
+| Penalización de Presencia (presence_penalty) | Controla la penalización por la repetición de palabras en la respuesta generada. | Este parámetro ajusta la penalización aplicada al modelo por incluir palabras repetidas en la respuesta generada. Un valor más alto de penalización de presencia reduce la probabilidad de que el modelo repita palabras en su salida, lo que puede mejorar la diversidad y la coherencia del texto generado. | [0, infinito) |
+| Penalización de Frecuencia (frequency_penalty) | Controla la penalización por el uso frecuente de palabras en la respuesta generada. | La penalización de frecuencia ajusta la probabilidad de que el modelo utilice palabras comunes en su salida. Un valor más alto de penalización de frecuencia desalienta al modelo a utilizar palabras comunes con demasiada frecuencia, lo que puede mejorar la diversidad y la originalidad del texto generado. | [0, infinito) |
+| Secuencia de Parada (stop_sequence) | Especifica una secuencia de tokens que indica al modelo que detenga la generación de texto. | Este hiperparámetro permite definir una secuencia de tokens que, cuando el modelo los genera, indica que la generación de texto debe detenerse. Es útil para controlar la longitud y el contenido de las respuestas generadas. | Secuencia de tokens |
+| Mejor de (best_of) | Controla el número de muestras generadas para seleccionar la mejor respuesta. | El hiperparámetro "mejor de" determina cuántas muestras de texto genera el modelo para una solicitud y luego selecciona la mejor respuesta según ciertos criterios predefinidos, como la coherencia y la relevancia. | [1, infinito) |
+| N (n) | Controla el número de pasos de generación para el muestreo de monte carlo. | Este parámetro especifica el número de pasos de generación utilizados para el muestreo de Monte Carlo, una técnica para estimar distribuciones de probabilidad mediante la generación de múltiples muestras. Un valor más alto de N puede mejorar la precisión del muestreo pero también aumenta el tiempo de computación. | [1, infinito) |
+| Nivel de Registro (log_level) | Controla el nivel de detalle de los registros generados por el modelo. | El nivel de registro especifica la cantidad de información detallada que se registra durante la generación de texto, como mensajes de depuración, advertencias o errores. Puede ajustarse para proporcionar más o menos información según las necesidades del usuario. | Niveles de registro: debug, info, warning, error, critical |
+
+### Explicación detallada y ejemplos
+
+1. **temperature:** La temperatura controla el nivel de aleatoriedad en las respuestas generadas. Un valor bajo (por ejemplo, 0.2) produce respuestas más determinísticas y coherentes, mientras que un valor alto (por ejemplo, 0.8) genera respuestas más creativas y diversas.
+
+> [!NOTE]
+> **temperature=0.2:** "La capital de Francia es París."
+> **temperature=0.8:** "¡Oh là là! Algunos dicen que la capital de Francia es París, pero otros mencionan el amor, la moda y el croissant".
+
+2. **max_tokens:** Establece el límite máximo de tokens en la respuesta generada. Esto controla la longitud de la respuesta.
+
+> [!NOTE]
+> **max_tokens=10:** "La respuesta es 42."
+> **max_tokens=50:** "La respuesta a esa pregunta es 42, que es considerado el 'número de la vida' según la famosa novela de ciencia ficción 'The Hitchhiker's Guide to the Galaxy'".
+
+3. **top_p:** También conocido como "nucleus sampling" o "pensamiento de muestras de núcleo", permite controlar la diversidad de las respuestas generadas estableciendo un umbral para la probabilidad acumulada de las opciones de palabras. Las palabras se eligen hasta que la probabilidad acumulada excede el valor top_p.
+
+> [!NOTE]
+> **top_p=0.5:** "Las estaciones del año son primavera, verano, otoño e invierno."
+> **top_p=0.9:** "Las estaciones del año pueden variar dependiendo de la ubicación geográfica, pero generalmente incluyen la primavera, el verano, el otoño y el invierno".
+
+4. **presence_penalty:** Controla la preferencia del modelo por incluir o no palabras específicas en su respuesta. Un valor más alto penalizará la aparición de palabras mencionadas en el prompt, lo que puede ayudar a evitar repeticiones o mantener una respuesta más imparcial.
+
+> [!NOTE]
+> **presence_penalty=0.2:** "El clima es agradable hoy. El sol brilla y el cielo está despejado."
+> **presence_penalty=0.8:** "El clima hoy es... ¡increíble! No puedo evitar emocionarme por el sol radiante y el cielo azul sin nubes".
+
+5. **frequency_penalty:** Controla la preferencia del modelo por utilizar palabras que ya ha utilizado en su respuesta. Un valor más alto penalizará la frecuencia de aparición de palabras, lo que puede ayudar a evitar respuestas repetitivas.
+
+> [!NOTE]
+> **frequency_penalty=0.2:** "Sí, estoy de acuerdo contigo."
+> **frequency_penalty=0.8:** "¡Definitivamente estoy de acuerdo contigo! ¡Totalmente de acuerdo! ¡Sin duda alguna, estoy de acuerdo contigo!"
+
+6. **stop_sequence:** Permite especificar una secuencia de palabras que indica al modelo que debe detener la generación de texto. Puedes utilizar esto para controlar la longitud de la respuesta o para evitar que el modelo continúe generando texto no deseado.
+
+> [!NOTE]
+> **stop_sequence="\n":** "Por favor, cuéntame un chiste.\n"
+> **stop_sequence="Gracias por tu ayuda":** "¿Me puedes ayudar con algo? Gracias por tu ayuda."
+
+7. **best_of:** Especifica el número de respuestas candidatas generadas y devuelve la mejor de ellas según un criterio de puntuación. Esto puede ser útil para obtener varias opciones y elegir la más adecuada.
+
+> [!NOTE]
+> **best_of=3:** "¿Cuál es el mejor libro de ciencia ficción?" (devuelve 3 respuestas candidatas y selecciona la mejor).
+> **best_of=5:** "¿Qué película me recomiendas?" (devuelve 5 respuestas candidatas y selecciona la mejor).
+
+8. **n:** Controla el número de respuestas generadas. Puedes utilizar esto para obtener múltiples respuestas en lugar de una sola.
+
+> [!NOTE]
+> **n=3:** "Describe la teoría de la relatividad de Einstein." (genera 3 respuestas diferentes).
+> **n=5:** "¿Cuál es tu color favorito?" (genera 5 respuestas diferentes).
+
+9. **log_level:** Permite controlar el nivel de registro (log) de salida del modelo. Los niveles disponibles son "debug", "info", "warning", "error" y "critical".
+
+> [!NOTE]
+> **log_level="debug":** "Habilita un registro detallado para depuración y seguimiento.
+> **log_level="error":** Solo muestra mensajes de error en el registro.
+
