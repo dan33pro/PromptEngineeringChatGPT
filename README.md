@@ -410,3 +410,128 @@ Ahora, a través de una instrucción, vamos a integrarle información reciente d
 > 
 > **log_level="error":** Solo muestra mensajes de error en el registro.
 
+# Casos de uso de ChatGPT
+
+## Resumen de textos
+
+Hacer resúmenes es una tarea común en el mundo académico y empresarial. Es necesario poder transmitir la información más importante y relevante de manera clara y concisa. Con el avance de la inteligencia artificial, ahora es posible hacer resúmenes de manera más eficiente y precisa.
+
+A continuación, se presentan los pasos para hacer resúmenes con inteligencia artificial:
+
+1. ** Definir la fuente de información:** Lo primero que se debe hacer es definir la fuente de información que se quiere resumir. Puede ser un artículo, un libro, una presentación, etc.
+2. **Seleccionar el modelo de lenguaje adecuado:** Es importante seleccionar el modelo de lenguaje adecuado para la tarea de resumen. Hay diferentes opciones disponibles, cada una con sus propias características y capacidades.
+3. **Preparar el texto:** Antes de ingresar el texto en el modelo de lenguaje, es necesario prepararlo. Esto implica eliminar información innecesaria y asegurarse de que el texto tenga una estructura clara y coherente.
+4. ** Generar el resumen:** Una vez que se ha preparado el texto, se puede ingresar en el modelo de lenguaje para generar el resumen. Es importante ajustar los parámetros adecuados, como la longitud del resumen y la temperatura del modelo.
+
+Primero utilizamos la técnica de Role Play para que chatgpt actúe como un experto en la temática del tema a resumir.
+
+> Quiero que actúes como experto redactor de textos, te daré un texto entre "" y tu responderás con un resumen en bullet points y aparte resaltaras la idea principal del texto en citas. y le proporcionamos el texto para resumir.
+
+5. **Revisar y refinar el resumen:** Finalmente, es importante revisar y refinar el resumen generado por el modelo de lenguaje. Asegurarse de que el resumen sea coherente y tenga sentido en el contexto original de la fuente de información.
+
+En conclusión, la inteligencia artificial puede ser una herramienta muy útil para hacer resúmenes de manera más eficiente y precisa. Es importante seguir los pasos adecuados y ajustar los parámetros adecuados para obtener los mejores resultados.
+
+Claro, aquí te dejo un ejemplo paso a paso de cómo pedir un resumen a ChatGPT:
+
+1. Abre una plataforma que te permita interactuar con ChatGPT, como OpenAI o Hugging Face.
+2. Escribe una pequeña introducción del texto que deseas resumir.
+3. A continuación, escribe la pregunta: "¿Puedes resumir este texto en unas pocas oraciones?"
+4. Espera unos segundos mientras ChatGPT procesa la solicitud y genera una respuesta.
+5. Lee la respuesta de ChatGPT y evalúa si cumple con tus expectativas. Si no estás satisfecho con el resumen generado, intenta reformular la pregunta o proporcionar más detalles sobre lo que esperas del resumen.
+6. Si estás satisfecho con el resumen generado, guárdalo y utilízalo para tus propios propósitos.
+
+¡Listo! Con estos sencillos pasos, puedes pedir un resumen a ChatGPT en cuestión de segundos.
+
+## Escritura de textos con ChatGPT
+- Corrección de estilos.
+- Darle estructura de escritura.
+- Reescribe de x manera ej: más amigable, con otro tono, más profesional, académico, según una serie.
+
+## Corrección con estilos predefinidos
+En la clase anterior aprendiste cómo se escriben y editan textos con ChatGPT. Además de esto también podemos aplicar corrección de estilos, una tarea importante en la escritura, pero que puede ser difícil de realizar sin ayuda. ChatGPT es una herramienta que nos aportará en esta tarea.
+
+Puede analizar el texto y proporcionar sugerencias para mejorar la gramática, la puntuación y el estilo. Además, ChatGPT es una herramienta útil para aquellos que están aprendiendo un nuevo idioma, ya que puede proporcionar sugerencias para mejorar la gramática y el vocabulario.
+
+Veamos algunos ejemplos a continuación.
+
+- **User:**
+```bash
+Actúa como un experto editor de textos, te daré un texto y un estilo y tono de escritura, y debes redactar nuevamente el texto pero usando ese estilo y tono especifico, no des explicaciones, solo redacta nuevamente el texto, ¿estas listo?
+```
+
+- **ChatGPT:**
+```bash
+¡Por supuesto! Estoy listo para comenzar. Adelante con el texto y el estilo y tono de escritura que deseas.
+```
+
+- **User:**
+En este ejemplo le daré un fragmento de la aclamada y reconocida obra literaria de “Don Quijote de la Mancha” de Miguel de Cervantes. Está escrito en un español medieval con una estructura de versos. Buscamos darle un estilo de escritura moderno y un tono más accesible.
+```bash
+Texto = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, consumían las tres partes de su hacienda. El resto della concluían sayo de velarte, calzas de velludo para las fiestas, con sus pantuflos de lo mesmo, y los días de entresemana se honraba con su vellorí de lo más fino. Tenía en su casa una ama que pasaba de los cuarenta, y una sobrina que no llegaba a los veinte, y un mozo de campo y plaza, que así ensillaba el rocín como tomaba la podadera. Frisaba la edad de nuestro hidalgo con los cincuenta años; era de complexión recia, seco de carnes, enjuto de rostro, gran madrugador y amigo de la caza. Quieren decir que tenía el sobrenombre de Quijada, o Quesada, que en esto hay alguna diferencia en los autores que deste caso escriben; aunque por conjeturas verosímiles se deja entender que se llamaba Quijana. Pero esto importa poco a nuestro cuento: basta que en la narración dél no se salga un punto de la verdad."
+Estilo=Moderno 
+Tono= Accesible para todos y todas
+```
+
+- **ChatGPT:**
+Hace no mucho tiempo, en una región de España que no mencionaré, habitaba un caballero de modesta fortuna. Él vestía con lanza y escudo antiguo, montando un caballo delgado y veloz. Su dieta consistía en una olla de carne de vaca, salpicón en la mayoría de las noches, guisos de lentejas los viernes, y ocasionalmente un pollo asado los domingos. Esto consumía la mayoría de su dinero, lo que dejaba poco para su vestimenta, la cual era adecuada para las ocasiones especiales y lucía muy elegante. Además, tenía una sirvienta de mediana edad, una sobrina joven y un trabajador de campo que hacía todo, desde arrear su caballo hasta podar las plantas. A pesar de sus cincuenta años, nuestro caballero era fuerte, delgado y tenía un rostro arrugado por el sol. Era un madrugador y le encantaba la caza. Algunos dicen que su apellido era Quijada, otros que era Quesada, pero lo que importa en nuestra historia es que siempre dijo la verdad.
+
+En el anterior ejemplo ves cómo ChatGPT cumple con su función y es capaz de re-escribir un texto usando el tono y el estilo solicitado en el prompt. Ahora juguemos con algunos estilos y tonos más.
+
+- **User:**
+```bash
+Redacta nuevamente el texto pero usa estilo de versos y un tono formal y elegante
+```
+
+- **ChatGPT:**
+En un sitio de La Mancha, hace tiempo, cuyo nombre evoco en mi memoria en vano, vivió un hidalgo cuya valentía y destreza se relataban con pasión en cada llano.
+
+Con lanza en ristre y adarga en su defensa, cabalgaba un corcel delgado y veloz, y una olla de carne, salpicón y lentejas, era su sustento, su manjar y su voz.
+
+Elegante y estiloso en los días festivos, con ropas de velludo y pantuflas al tono, nuestro hidalgo, ya entrada la edad madura, conquistaba corazones con su noble abandono.
+
+Una ama, sobrina y un joven ayudante, completaban su hogar, su castillo y su fe, mientras perseguía a su musa encantadora, y a lomos de Rocinante, él buscaba su hazaña y su ley.
+
+Quijada o Quijana, su nombre no importa, la verdad era su lema, su bandera y su honor, pues en la narración de su historia y su gloria, la realidad fue siempre su guía, su luz y su fulgor.
+
+- **User:**
+```bash
+Redacta nuevamente el texto original pero usa estilo de editorial y un tono formal
+```
+
+- **ChatGPT:**
+En un lugar no precisado de la región española de La Mancha, cuyo nombre el protagonista prefiere omitir, vivió hace algún tiempo un hidalgo. Este hombre, caracterizado por su armamento compuesto por lanza y adarga, cabalgaba sobre un equino de complexión esbelta y veloz. Su dieta cotidiana, compuesta mayormente por una olla de carne de vaca, salpicón en las noches, y lentejas en los días de viernes, además de un eventual pollo asado los domingos, consumía la mayor parte de su patrimonio. Como resultado, vestía ropas de velludo para las festividades y pantuflas a juego. El resto de sus haberes se componían de un sayo de terciopelo y un sombrero con borlas que lucía en ocasiones especiales. La casa donde residía el hidalgo contaba con una ama de más de cuarenta años, una sobrina aún joven y un trabajador rural. Este último se encargaba de ensillar su caballo y de podar los árboles en los días entresemana. Nuestro protagonista, con alrededor de cincuenta años de edad, era un hombre de complexión fuerte, con rasgos faciales severos y secos. Asimismo, era un apasionado de la caza y aficionado a madrugar. Respecto a su nombre, algunos autores lo identifican como Quijada, mientras que otros lo mencionan como Quesada. Sin embargo, este detalle es irrelevante para el relato que se pretende narrar. En síntesis, la veracidad de la narración es primordial en esta historia.
+
+## ChatGPT como tu mentor personalizado
+
+Algunos ejemplos de prompts utilizando el role play para que puedas usar ChatGPT como un tutor personalizado en diferentes áreas:
+
+1. **Inglés:**
+"Puedes actuar como un experto profesor de inglés con un nivel avanzado. Enséñame el uso correcto de los tiempos verbales en inglés y proporciona algunos ejemplos. Luego, hazme preguntas en diferentes tiempos verbales y dame retroalimentación sobre mis respuestas y marca mis errores."
+
+2. **Programación:**
+"Actúa como un especialista en programación y enséñame los fundamentos de la programación en Python. Proporciona ejemplos de código y explica los conceptos detrás de ellos. Después, dame algunos problemas de programación para resolver y brinda retroalimentación sobre mi solución y sugiere mejoras."
+
+3. **Historia:**
+"Puedes actuar como un experto historiador y enseñarme sobre la Revolución Francesa. Proporcione un resumen de los eventos principales y explique cómo afectaron la historia de Francia y Europa. Luego, hazme preguntas para asegurarte de que entiendo la información y proporciona retroalimentación sobre mis respuestas y aclara cualquier malentendido."
+
+4. **Nutrición:**
+"Actúa como un nutricionista y enséñame sobre una dieta equilibrada. Explica los diferentes grupos de alimentos y sus beneficios para la salud. Luego, hazme preguntas sobre cómo mejorar mi dieta actual y brinda retroalimentación sobre mis respuestas y sugiere cambios que pueda hacer."
+
+## ChatGPT como asistente personal
+
+Como asistente personal, ChatGPT puede ayudarte a crear una rutina diaria y programar tus actividades para que puedas ser más eficiente y productivo. Además, te mostraré cómo exportar tu calendario diario a Google Calendar para que puedas acceder a él desde cualquier dispositivo.
+
+- **Crear una rutina diaria con ChatGPT como experto nutricionista:** Si buscas mejorar tu dieta, ChatGPT como experto nutricionista puede ayudarte a crear una rutina diaria de comidas saludables. Simplemente proporciónale información sobre tus preferencias alimenticias, restricciones dietéticas y objetivos de salud, y ChatGPT te proporcionará una lista personalizada de comidas y horarios para cada día. Puedes ajustar y personalizar la rutina según tus necesidades y preferencias.
+- **Crear una lista to-do para planear un viaje con ChatGPT como asistente personal:** Si estás planeando un viaje, ChatGPT puede ayudarte a crear una lista to-do para asegurarte de que no se te olvide nada importante. Simplemente proporciónale información sobre tu destino, fechas de viaje y actividades planeadas, y ChatGPT te proporcionará una lista de tareas con fechas límite para cada una de ellas. Puedes ajustar y personalizar la lista según tus necesidades y preferencias.
+- **Escribir un correo con un tono específico con ChatGPT como asistente personal:** Si necesitas escribir un correo con un tono específico, como un correo formal para una entrevista de trabajo o un correo amistoso para un amigo, ChatGPT como asistente personal puede ayudarte a redactarlo. Simplemente proporciona información sobre el propósito del correo y el tono que deseas utilizar, y ChatGPT te proporcionará una plantilla para empezar. Puedes ajustar y personalizar la plantilla según tus necesidades y preferencias.
+- **Exportar tu calendario diario a Google Calendar con ChatGPT:** Una vez que hayas creado tu rutina diaria con ChatGPT, puedes exportarla a Google Calendar para que puedas acceder a ella desde cualquier dispositivo. Para hacerlo, sigue estos sencillos pasos:
+
+1. Descarga el archivo .ics generado por ChatGPT al crear tu rutina diaria.
+2. Abre Google Calendar en tu navegador web.
+3. Haz clic en "Configuración" en la esquina superior derecha de la pantalla.
+4. Selecciona "Importar y exportar" en el menú desplegable.
+5. Selecciona "Seleccionar archivo" y busca el archivo .ics que descargaste.
+6. Selecciona el calendario de Google al que deseas importar la rutina diaria.
+7. Haz clic en "Importar" y espera a que se complete el proceso.
+
+¡Listo! Ahora puedes acceder a tu rutina diaria en Google Calendar y programar tus actividades con facilidad.
